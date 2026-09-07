@@ -83,6 +83,31 @@ Use only when explicitly requested with phrases like lục kho, tái chế, remi
 
 Do not include reuse plans in normal production outputs.
 
+## Completion Depth
+
+Respect the requested depth. Do not always create a full production pack.
+
+Supported depths:
+
+- `source_only`: identify and save the source only.
+- `dna_only`: extract source DNA only.
+- `song_brief`: create original song premise/title/angle from DNA.
+- `song_pack`: create lyrics plus Suno/ACE-Step style prompt.
+- `visual_pack`: create visual concept and prompts.
+- `narration_pack`: create narration/copy assets.
+- `full_production`: create all normal production blocks.
+- `archive_reuse`: create only requested reuse/remix assets.
+
+Always record:
+
+- `requested_depth`;
+- `stage`;
+- `available_blocks`;
+- `missing_blocks`;
+- `next_actions`.
+
+If the user says "chỉ lấy DNA", "chưa cần lyric", "làm tới brief thôi", or similar, stop at that stage. Save enough progress so a later agent can continue without researching from scratch.
+
 ## Source Types
 
 Support:
@@ -102,7 +127,7 @@ For non-song sources, extract atmosphere, conflict, speaker position, central im
 
 ## Output
 
-Default output should follow `production_pack.schema.json` conceptually. If the user wants raw data, output JSON. Otherwise use concise Markdown sections:
+Default output should follow `production_pack.schema.json` conceptually. If the user asks for partial output, follow the requested depth and include stage metadata. If the user wants raw data, output JSON. Otherwise use concise Markdown sections:
 
 1. Source DNA
 2. Original Song Brief

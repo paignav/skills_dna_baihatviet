@@ -85,6 +85,17 @@ Do not use lyrics as the entire on-screen text plan. Keep on-screen text short e
 
 For detailed narration and copy formats, read [references/narration-copy-pack.md](references/narration-copy-pack.md).
 
+### 7. Completion Depth And Resume
+
+Respect the user's requested completion depth. Sometimes the user only wants DNA extraction or a partial block, not a full production pack.
+
+- If the user asks for "dna only", "chỉ lấy DNA", "chưa cần lyric", or similar, stop after source DNA and stage metadata.
+- Save progress using `requested_depth`, `stage`, `available_blocks`, `missing_blocks`, and `next_actions`.
+- When continuing from an existing record, resume from the saved stage instead of redoing earlier work.
+- Do not generate deeper blocks than requested.
+
+For detailed stage rules, read [references/completion-stages.md](references/completion-stages.md).
+
 ## Default Outcome
 
 Produce a compact "song DNA brief" that helps the user create a new song with similar emotional power while avoiding imitation.
@@ -96,7 +107,7 @@ Include:
 - the song's transferable DNA: emotional premise, narrative setup, hook shape, contrast, pacing, sonic signature, and audience promise;
 - what must not be copied: melody, distinctive lyric phrases, character names, proprietary film details, and recognizable arrangement fingerprints;
 - three original song angles inspired by the DNA;
-- one chosen direction with structure map, hook plan, polished Vietnamese lyrics that have passed internal vocal-fit checks, Suno/ACE-Step style prompt, and visual Reel/Short concept when relevant.
+- one chosen direction with only the blocks requested by the user, plus stage metadata so the work can continue later.
 
 When the user asks for candidate songs, return a shortlist ranked by **creative usefulness for new music**, not by fame alone.
 
@@ -130,7 +141,7 @@ Use the lightest mode that fits the user's ask:
 - **Archive reuse:** only for "lục kho", "tái chế nội dung cũ", "kho đã dùng hết", or explicit requests to generate more assets from existing records.
 - **Origin-only research:** only when the user specifically asks for the story behind the old source without asking to create music.
 
-For reference-to-new-song or candidate discovery, read [references/creative-dna.md](references/creative-dna.md). For bulk ingestion, duplicate checks, or archive reuse, read [references/archive-and-ingestion.md](references/archive-and-ingestion.md). When drafting or revising Vietnamese lyrics, also read [references/vietnamese-vocal-fit.md](references/vietnamese-vocal-fit.md). When the user wants visuals, Reels, Shorts, cover art, MV, or AI-video prompts, read [references/visual-reel-pack.md](references/visual-reel-pack.md). When the user wants narration, articles, captions, podcast audio, or text overlays, read [references/narration-copy-pack.md](references/narration-copy-pack.md). For output templates, read [references/output-formats.md](references/output-formats.md).
+For reference-to-new-song or candidate discovery, read [references/creative-dna.md](references/creative-dna.md). For completion depth, partial outputs, or resuming existing work, read [references/completion-stages.md](references/completion-stages.md). For bulk ingestion, duplicate checks, or archive reuse, read [references/archive-and-ingestion.md](references/archive-and-ingestion.md). When drafting or revising Vietnamese lyrics, also read [references/vietnamese-vocal-fit.md](references/vietnamese-vocal-fit.md). When the user wants visuals, Reels, Shorts, cover art, MV, or AI-video prompts, read [references/visual-reel-pack.md](references/visual-reel-pack.md). When the user wants narration, articles, captions, podcast audio, or text overlays, read [references/narration-copy-pack.md](references/narration-copy-pack.md). For output templates, read [references/output-formats.md](references/output-formats.md).
 
 ## Creative Fit
 

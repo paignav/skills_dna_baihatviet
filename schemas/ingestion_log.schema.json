@@ -6,6 +6,7 @@
   "required": [
     "started_at",
     "query_or_topic",
+    "requested_depth",
     "archive_checked",
     "candidates_found",
     "new_records_saved",
@@ -17,6 +18,19 @@
   "properties": {
     "started_at": { "type": "string" },
     "query_or_topic": { "type": "string" },
+    "requested_depth": {
+      "type": "string",
+      "enum": [
+        "source_only",
+        "dna_only",
+        "song_brief",
+        "song_pack",
+        "visual_pack",
+        "narration_pack",
+        "full_production",
+        "archive_reuse"
+      ]
+    },
     "archive_checked": { "type": "boolean" },
     "candidates_found": { "type": "integer", "minimum": 0 },
     "new_records_saved": { "type": "integer", "minimum": 0 },

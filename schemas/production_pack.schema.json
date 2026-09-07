@@ -8,11 +8,10 @@
     "source_ids",
     "title",
     "status",
-    "original_song_brief",
-    "lyric_pack",
-    "music_prompt",
-    "visual_pack",
-    "narration_copy",
+    "requested_depth",
+    "stage",
+    "available_blocks",
+    "missing_blocks",
     "archive_metadata"
   ],
   "properties": {
@@ -21,6 +20,36 @@
     "title": { "type": "string" },
     "status": { "type": "string", "enum": ["draft", "generated", "published", "archived"] },
     "version": { "type": "integer", "minimum": 1 },
+    "requested_depth": {
+      "type": "string",
+      "enum": [
+        "source_only",
+        "dna_only",
+        "song_brief",
+        "song_pack",
+        "visual_pack",
+        "narration_pack",
+        "full_production",
+        "archive_reuse"
+      ]
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "source_found",
+        "dna_extracted",
+        "song_brief_created",
+        "lyric_draft_created",
+        "music_prompt_created",
+        "visual_pack_created",
+        "narration_pack_created",
+        "ready_to_produce",
+        "published_or_archived"
+      ]
+    },
+    "available_blocks": { "type": "array", "items": { "type": "string" } },
+    "missing_blocks": { "type": "array", "items": { "type": "string" } },
+    "next_actions": { "type": "array", "items": { "type": "string" } },
     "original_song_brief": {
       "type": "object",
       "required": ["premise", "characters", "setting", "message", "target_use"],

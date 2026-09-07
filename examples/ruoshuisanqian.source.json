@@ -28,6 +28,11 @@
   "new_song_angles": ["Một Bến Trong Ngàn Sông", "Mưa Qua Mái Đình", "Chỉ Một Người Thôi"],
   "visual_anchors": ["Vietnamese riverside dock", "village communal house", "ao tac", "rain umbrella"],
   "reuse_ideas": [],
+  "requested_depth": "dna_only",
+  "stage": "dna_extracted",
+  "available_blocks": ["source_identity", "source_dna", "archive_metadata"],
+  "missing_blocks": ["original_song_brief", "lyric_pack", "music_prompt", "visual_pack", "narration_copy"],
+  "next_actions": ["create_song_brief", "create_song_pack", "create_full_production"],
   "status": "used",
   "created_at": null,
   "updated_at": null

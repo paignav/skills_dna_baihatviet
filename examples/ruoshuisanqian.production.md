@@ -19,6 +19,14 @@ Premise: Một người trở lại bến sông nơi từng hẹn cưới, thấ
 
 Setting: Vietnamese old riverside village, rain, communal house gate, ferry dock.
 
+Requested depth: `full_production`
+
+Stage: `ready_to_produce`
+
+Available blocks: `source_dna`, `original_song_brief`, `lyric_pack`, `music_prompt`, `visual_pack`, `narration_copy`, `archive_metadata`
+
+Missing blocks: `publish_metadata`
+
 ## Lyric Pack
 
 ```text

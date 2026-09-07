@@ -16,6 +16,7 @@ Rules:
 - If already in archive, skip silently.
 - Store only new valid source records.
 - Include songs, film themes, literature, poetry, folklore, and story sources when relevant.
+- Default requested_depth is dna_only unless another depth is specified.
 - Do not create production packs unless requested.
 - Do not ask for decisions on ordinary skips.
 - Report only severe errors.
@@ -28,6 +29,7 @@ Expected log:
 {
   "started_at": "",
   "query_or_topic": "",
+  "requested_depth": "dna_only",
   "archive_checked": true,
   "candidates_found": 0,
   "new_records_saved": 0,

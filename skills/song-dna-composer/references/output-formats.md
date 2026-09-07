@@ -66,6 +66,13 @@ Narration/Copy pack:
 - Podcast intro:
 
 Nguồn/confidence:
+
+Stage:
+- requested_depth:
+- stage:
+- available_blocks:
+- missing_blocks:
+- next_actions:
 ```
 
 ## Candidate Discovery For New Songs
@@ -136,6 +143,34 @@ Duplicates skipped:
 Low-confidence skipped:
 Errors:
 Notes:
+```
+
+## DNA Only Output
+
+Use when the user asks only for DNA/source extraction.
+
+```markdown
+Source:
+Type:
+Confidence:
+
+Creative DNA:
+- Emotional engine:
+- Narrative pressure:
+- Speaker position:
+- Hook promise:
+- Sonic/style signature:
+- Memory images:
+- Audience use:
+
+Do not copy:
+
+Stage:
+- requested_depth: dna_only
+- stage: dna_extracted
+- available_blocks:
+- missing_blocks:
+- next_actions:
 ```
 
 ## Duplicate Report For User-Specified Mode

@@ -14,6 +14,10 @@
     "confidence",
     "creative_dna",
     "do_not_copy",
+    "requested_depth",
+    "stage",
+    "available_blocks",
+    "missing_blocks",
     "status"
   ],
   "properties": {
@@ -73,6 +77,36 @@
     "new_song_angles": { "type": "array", "items": { "type": "string" } },
     "visual_anchors": { "type": "array", "items": { "type": "string" } },
     "reuse_ideas": { "type": "array", "items": { "type": "string" } },
+    "requested_depth": {
+      "type": "string",
+      "enum": [
+        "source_only",
+        "dna_only",
+        "song_brief",
+        "song_pack",
+        "visual_pack",
+        "narration_pack",
+        "full_production",
+        "archive_reuse"
+      ]
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "source_found",
+        "dna_extracted",
+        "song_brief_created",
+        "lyric_draft_created",
+        "music_prompt_created",
+        "visual_pack_created",
+        "narration_pack_created",
+        "ready_to_produce",
+        "published_or_archived"
+      ]
+    },
+    "available_blocks": { "type": "array", "items": { "type": "string" } },
+    "missing_blocks": { "type": "array", "items": { "type": "string" } },
+    "next_actions": { "type": "array", "items": { "type": "string" } },
     "status": { "type": "string", "enum": ["new", "used", "remixed", "archived"] },
     "created_at": { "type": ["string", "null"] },
     "updated_at": { "type": ["string", "null"] }
