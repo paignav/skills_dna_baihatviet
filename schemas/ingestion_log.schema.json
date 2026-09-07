@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/song-dna-system/ingestion_log.schema.json",
+  "title": "IngestionLog",
+  "type": "object",
+  "required": [
+    "started_at",
+    "query_or_topic",
+    "archive_checked",
+    "candidates_found",
+    "new_records_saved",
+    "duplicates_skipped",
+    "low_confidence_skipped",
+    "errors",
+    "notes"
+  ],
+  "properties": {
+    "started_at": { "type": "string" },
+    "query_or_topic": { "type": "string" },
+    "archive_checked": { "type": "boolean" },
+    "candidates_found": { "type": "integer", "minimum": 0 },
+    "new_records_saved": { "type": "integer", "minimum": 0 },
+    "duplicates_skipped": { "type": "integer", "minimum": 0 },
+    "low_confidence_skipped": { "type": "integer", "minimum": 0 },
+    "errors": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/song-dna-system/production_pack.schema.json",
+  "title": "ProductionPack",
+  "type": "object",
+  "required": [
+    "id",
+    "source_ids",
+    "title",
+    "status",
+    "original_song_brief",
+    "lyric_pack",
+    "music_prompt",
+    "visual_pack",
+    "narration_copy",
+    "archive_metadata"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "source_ids": { "type": "array", "items": { "type": "string" } },
+    "title": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "generated", "published", "archived"] },
+    "version": { "type": "integer", "minimum": 1 },
+    "original_song_brief": {
+      "type": "object",
+      "required": ["premise", "characters", "setting", "message", "target_use"],
+      "properties": {
+        "premise": { "type": "string" },
+        "characters": { "type": "string" },
+        "setting": { "type": "string" },
+        "message": { "type": "string" },
+        "target_use": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "lyric_pack": {
+      "type": "object",
+      "required": ["structure", "hook", "lyrics"],
+      "properties": {
+        "structure": { "type": "string" },
+        "hook": { "type": "string" },
+        "lyrics": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "music_prompt": {
+      "type": "object",
+      "required": ["style_of_music"],
+      "properties": {
+        "style_of_music": { "type": "string" },
+        "bpm": { "type": ["integer", "null"] },
+        "vocal": { "type": ["string", "null"] },
+        "negative": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "visual_pack": {
+      "type": "object",
+      "required": ["art_concept", "key_visual", "image_prompt", "clip_prompts"],
+      "properties": {
+        "art_concept": { "type": "string" },
+        "key_visual": { "type": "string" },
+        "characters": { "type": "string" },
+        "location": { "type": "string" },
+        "symbolic_objects": { "type": "array", "items": { "type": "string" } },
+        "color_palette": { "type": "array", "items": { "type": "string" } },
+        "image_prompt": { "type": "string" },
+        "clip_prompts": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "narration_copy": {
+      "type": "object",
+      "required": ["cold_open", "voiceover_15s", "on_screen_text", "caption_short"],
+      "properties": {
+        "cold_open": { "type": "string" },
+        "voiceover_15s": { "type": "string" },
+        "voiceover_30s": { "type": ["string", "null"] },
+        "on_screen_text": { "type": "array", "items": { "type": "string" } },
+        "caption_short": { "type": "string" },
+        "caption_long": { "type": ["string", "null"] },
+        "podcast_intro": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "archive_metadata": {
+      "type": "object",
+      "required": ["source_type", "copy_risk", "confidence"],
+      "properties": {
+        "source_type": { "type": "string" },
+        "copy_risk": { "type": "string", "enum": ["low", "medium", "high"] },
+        "confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+        "duplicate_key": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,34 @@
+{
+  "id": "src_song_ruoshuisanqian_shitou_zhangxiaotang",
+  "source_type": "song",
+  "canonical_title": "Nhược Thủy Tam Thiên",
+  "original_title": "弱水三千",
+  "aliases": ["Ruo Shui San Qian", "Three Thousand Weak Waters"],
+  "creators": ["陆新桥", "徐一鸣", "石头", "张晓棠"],
+  "year": "2015",
+  "language": "Chinese",
+  "country_or_region": "China",
+  "source_urls": [],
+  "confidence": "medium",
+  "origin_context": "Popular Chinese duet with classical-romance imagery. Exact creator interviews or first-party origin notes should be verified before making factual claims.",
+  "creative_dna": {
+    "emotional_engine": "Giữa muôn ngả tình duyên, chỉ chọn một người.",
+    "narrative_pressure": "Hai người xa nhau trong không gian mưa, bến nước, cổ trấn, lời thề.",
+    "speaker_position": "Song ca nam nữ, hai phía cùng nhớ nhưng không chạm được nhau.",
+    "hook_promise": "Dù ngàn dòng nước trôi qua, lòng chỉ giữ một bến.",
+    "sonic_or_style_signature": "Cổ phong trữ tình song ca, dân nhạc và pop ballad.",
+    "memory_images": ["mưa", "bến nước", "trăng", "ô giấy", "mái ngói"],
+    "audience_use": ["duet karaoke", "romance reel", "short-form cổ phong visual"]
+  },
+  "do_not_copy": [
+    "Do not use the exact title phrase as the main hook.",
+    "Do not copy signature lyric images such as pear blossoms at the window.",
+    "Do not imitate melody or duet call-response too closely."
+  ],
+  "new_song_angles": ["Một Bến Trong Ngàn Sông", "Mưa Qua Mái Đình", "Chỉ Một Người Thôi"],
+  "visual_anchors": ["Vietnamese riverside dock", "village communal house", "ao tac", "rain umbrella"],
+  "reuse_ideas": [],
+  "status": "used",
+  "created_at": null,
+  "updated_at": null
+}
