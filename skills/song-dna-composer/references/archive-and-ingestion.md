@@ -2,6 +2,19 @@
 
 Use this reference when the user wants bulk crawling, archive/database storage, duplicate checks, or reuse of existing source records.
 
+## Local Archive Location
+
+When a repo or working folder is provided, use its `data/` folder as the single source of truth:
+
+- `data/sources/` for source records.
+- `data/productions/` for original song/content production packs.
+- `data/logs/` for crawl logs, duplicate skips, run summaries, and serious errors.
+- `data/indexes/` for duplicate lookup indexes.
+- `data/inbox/` for raw user lists, rough notes, and URLs waiting to be processed.
+- `data/archive/` for retired or older records.
+
+Do not save persistent archive data outside `data/` unless the user explicitly requests a different location. Update the relevant index after adding or changing records.
+
 ## Modes
 
 ### Bulk Ingestion Mode

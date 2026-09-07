@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "description": "Lookup index for production packs. Agents should update this after adding production records.",
+  "productions": []
+}

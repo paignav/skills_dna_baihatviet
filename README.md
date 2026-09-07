@@ -6,6 +6,9 @@ This repo contains two layers:
 
 - `skills/song-dna-composer/`: Codex skill version.
 - `prompts/` + `schemas/`: portable version for other AI agents such as ChatGPT, Claude, Gemini, Antigravity, Hyperframe, or local agents.
+- `data/`: the single local archive where all agents should save sources, production packs, logs, indexes, and progress.
+
+For local PC usage, read `LOCAL_WORKFLOW.md`. Treat the local folder as the main archive and GitHub as backup/sync.
 
 ## What It Produces
 
@@ -54,6 +57,35 @@ Nếu agent hỗ trợ Codex skill, copy thư mục:
 
 ```text
 skills/song-dna-composer/
+```
+
+## Local Data Là Kho Chính
+
+Đặt repo ở một folder cố định trên PC, ví dụ:
+
+```text
+D:\AI_MUSIC\skills_dna_baihatviet
+```
+
+Mọi AI agent khác phải làm việc trực tiếp trong folder này. Không lưu DNA, lyric, visual concept, narration, log hoặc tiến độ ra chỗ khác.
+
+Kho data nằm ở:
+
+```text
+data/
+  sources/
+  productions/
+  logs/
+  indexes/
+  inbox/
+  archive/
+```
+
+Luôn đưa cho agent các file:
+
+```text
+LOCAL_WORKFLOW.md
+prompts/agent_handoff_prompt.md
 ```
 
 ## Mức Độ Hoàn Thiện
@@ -212,6 +244,14 @@ song-dna-system/
     source_record.schema.json
     production_pack.schema.json
     ingestion_log.schema.json
+  data/
+    README.md
+    sources/
+    productions/
+    logs/
+    indexes/
+    inbox/
+    archive/
   examples/
     ruoshuisanqian.production.md
     ruoshuisanqian.source.json

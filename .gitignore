@@ -2,8 +2,19 @@
 Thumbs.db
 *.log
 *.tmp
-data/
 exports/
 node_modules/
 .env
 .env.*
+
+# Keep the local archive structure in git, but avoid committing bulky/generated data by accident.
+data/**/*.mp3
+data/**/*.wav
+data/**/*.flac
+data/**/*.mp4
+data/**/*.mov
+data/**/*.avi
+data/**/*.png
+data/**/*.jpg
+data/**/*.jpeg
+data/**/*.webp

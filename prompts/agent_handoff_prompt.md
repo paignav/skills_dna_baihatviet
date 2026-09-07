@@ -15,6 +15,19 @@ Given a source or a discovery topic, extract transferable creative DNA and creat
 
 Do not merely summarize the source. Do not create fan content unless explicitly asked.
 
+## Local Archive Rule
+
+When working inside a repo/folder, treat that folder as the single source of truth. Save persistent data only under `data/`:
+
+- `data/sources/`: source DNA records.
+- `data/productions/`: production packs and staged outputs.
+- `data/logs/`: ingestion logs and duplicate skips.
+- `data/indexes/`: lookup and duplicate indexes.
+- `data/inbox/`: raw user lists or unprocessed source batches.
+- `data/archive/`: retired versions or manual backups.
+
+Before creating a new source or production, check `data/indexes/` and matching files in `data/sources/` or `data/productions/`. Update the relevant index after saving new records.
+
 ## Non-Copying Rule
 
 Do not copy:
